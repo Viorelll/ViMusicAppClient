@@ -10,7 +10,6 @@ import { AlbumEditComponent } from './albums/album-edit/album-edit.component';
 import { AlbumDetailComponent } from './albums/album-detail/album-detail.component';
 import { AlbumListComponent } from './albums/album-list/album-list.component';
 import { AlbumStartComponent } from './albums/album-start/album-start.component';
-import { AuthComponent } from './auth/auth.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
@@ -19,6 +18,7 @@ import { LibraryDetailComponent } from './library/library-detail/library-detail.
 import { LibraryEditComponent } from './library/library-edit/library-edit.component';
 import { LibraryListComponent } from './library/library-list/library-list.component';
 import { LibraryStartComponent } from './library/library-start/library-start.component';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,6 @@ import { LibraryStartComponent } from './library/library-start/library-start.com
     AlbumDetailComponent,
     AlbumListComponent,
     AlbumStartComponent,
-    AuthComponent,
     LoadingSpinnerComponent,
     LibraryComponent,
     LibraryDetailComponent,
@@ -42,6 +41,7 @@ import { LibraryStartComponent } from './library/library-start/library-start.com
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    AuthenticationModule,
     HttpClientModule
   ],
   providers: [],

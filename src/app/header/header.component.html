@@ -24,10 +24,7 @@
         </div>
         <div class="col-md-2">					
             <div class="navbar-nav" *ngIf="!isAuthenticated">
-                <a href="/auth" class="nav-item nav-link">Sign in</a>
-            </div>	
-            <div class="navbar-nav" *ngIf="isAuthenticated">
-                <a href="/auth" class="nav-item nav-link" (click)="onLogout()">Logout</a>
+                <a href="/login" class="nav-item nav-link">Sign in</a>
             </div>	
         </div>
     </div>	
