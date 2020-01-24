@@ -10,8 +10,8 @@ import {
 } from 'angular-oauth2-oidc';
 import { initAuthentication, configurationFactory, ServerConfig } from './auth.config';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { LoginCallbackComponent } from './login-callback/login-callback.component';
 import { LoginComponent } from './login/login.component';
+import { LoginCallbackComponent } from './login-callback/login-callback.component';
 
 const authModuleConfig: OAuthModuleConfig = {
   // Inject "Authorization: Bearer ..." 

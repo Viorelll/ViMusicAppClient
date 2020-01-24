@@ -9,7 +9,7 @@
         <div class="col-md-2">
             <div class="navbar-nav">
                 <a href="#" class="nav-item nav-link active">Home</a>
-                <a href="#" class="nav-item nav-link">Library</a>
+                <a href="/library" class="nav-item nav-link">Library</a>
             </div>
         </div>					
         <div class="col-md-8">	
@@ -23,9 +23,19 @@
             </form>
         </div>
         <div class="col-md-2">					
-            <div class="navbar-nav" *ngIf="!isAuthenticated">
-                <a href="/login" class="nav-item nav-link">Sign in</a>
-            </div>	
+            <span class="float-right">
+                <div class="navbar-nav">
+                    <li *ngIf="isAuthenticated">
+                        <a style="cursor:pointer" (click)="onLogout()">Sign out</a>
+                        <div class="row">
+                            <small>{{ userEmail }}</small>
+                        </div>
+                    </li>
+                    <li *ngIf="!isAuthenticated">
+                        <a style="cursor:pointer" (click)="onLogin()">Sign in</a>
+                    </li>      
+                </div>	
+            </span>
         </div>
     </div>	
 </nav>

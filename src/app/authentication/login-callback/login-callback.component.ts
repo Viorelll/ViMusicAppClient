@@ -14,11 +14,10 @@ export class LoginCallbackComponent implements OnInit {
   { }
 
   ngOnInit() {
-    const redirectUrl = this.oauthService.state || '/';
+    const redirectUrl = this.oauthService.state || '/library';
     this.userService.registerUser()
       .subscribe(() => {
         this.router.navigateByUrl(redirectUrl);
       });
   }
 }
-

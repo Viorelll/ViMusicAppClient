@@ -10,25 +10,27 @@ import { LibraryEditComponent } from './library/library-edit/library-edit.compon
 import { LibraryDetailComponent } from './library/library-detail/library-detail.component';
 
 import { LoginComponent } from './authentication/login/login.component';
+import { LibraryComponent } from './library/library.component';
+import { AuthorizationGuard } from './authentication/guards/authorization.guard';
+import { LoginActivateGuard } from './authentication/guards/login-activate.guard';
 import { LoginCallbackComponent } from './authentication/login-callback/login-callback.component';
 
 
 const routes: Routes = [
-  //{path: '', redirectTo: '/albums', pathMatch: 'full'},
   {
-    path: 'login', component: LoginComponent
+    path: 'login', component: LoginComponent, canActivate: [LoginActivateGuard]
   },
   {
     path: 'login-callback', component: LoginCallbackComponent
   },
-  {path: 'library', component: AlbumsComponent, children: [
+  {path: 'library', component: LibraryComponent, canActivate: [AuthorizationGuard], children: [
     {path: '', component: LibraryStartComponent},
     {path: 'new', component: LibraryEditComponent},
     {path: ':id', component: LibraryDetailComponent, resolve: [AlbumResolverService]},
     {path: ':id/edit', component: LibraryEditComponent,  resolve: [AlbumResolverService]},
     ]
   },
-  {path: 'albums', component: AlbumsComponent, children: [
+  {path: 'albums', component: AlbumsComponent, canActivate: [AuthorizationGuard], children: [
     {path: '', component: AlbumStartComponent},
     {path: 'new', component: AlbumEditComponent},
     {path: ':id', component: AlbumDetailComponent, resolve: [AlbumResolverService]},
