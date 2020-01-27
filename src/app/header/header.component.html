@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <nav class="navbar navbar-expand-md justify-content-center navbar-light bg-light">			
-    <a href="#" class="navbar-brand">
+    <a href="/home" class="navbar-brand">
         <img src="assets/logos/logo.png" height="40" width="40" alt="">
         <figcaption style="font-size: 10px;">ViMusicApp</figcaption>
     </a>
     <div class="row">			
         <div class="col-md-2">
             <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link active">Home</a>
-                <a href="/library" class="nav-item nav-link">Library</a>
+                <a href="/home" class="nav-item nav-link" [routerLinkActive]="['active']">Home</a>
+                <a href="/library" class="nav-item nav-link" [routerLinkActive]="['active']">Library</a>
             </div>
         </div>					
         <div class="col-md-8">	

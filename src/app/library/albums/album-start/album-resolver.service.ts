@@ -1,6 +1,6 @@
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { Album } from '../../shared/album.model';
+import { Album } from '../../../shared/album.model';
 
 
 @Injectable({providedIn: 'root'})
