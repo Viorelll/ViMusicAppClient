@@ -12,31 +12,31 @@ import { OAuthService } from 'angular-oauth2-oidc';
 export class HeaderComponent implements OnInit, OnDestroy {
     private userSubscription: Subscription; 
     isAuthenticated = false;
-    userEmail:string;
+    userEmail: string;
   
-    constructor(private userService : UserService) {}
+    //constructor(private userService : UserService) {}
     
     ngOnInit(): void {
-        this.userSubscription = this.userService.user
-            .subscribe(user => {
-                this.isAuthenticated = !!user;  //samel like ---  !user ? false : true;
+        // this.userSubscription = this.userService.user
+        //     .subscribe(user => {
+        //         this.isAuthenticated = !!user;  //samel like ---  !user ? false : true;
 
-                if (this.isAuthenticated) {
-                    this.userEmail = user.email;
-                }
-                console.log('HeaderComponent.isAuthenticated: ' + this.isAuthenticated );
-            });
+        //         if (this.isAuthenticated) {
+        //             this.userEmail = user.email;
+        //         }
+        //         console.log('HeaderComponent.isAuthenticated: ' + this.isAuthenticated );
+        //     });
     }
 
     ngOnDestroy(): void {
-        this.userSubscription.unsubscribe();
+        //this.userSubscription.unsubscribe();
     }
 
     public onLogout() {
-        this.userService.onLogout();
+        //this.userService.onLogout();
     }
     public onLogin() {
-        this.userService.onLogin();
+        //this.userService.onLogin();
     }
 
 }

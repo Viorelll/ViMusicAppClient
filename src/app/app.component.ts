@@ -12,10 +12,10 @@ export class AppComponent implements OnInit{
   /**
    *
    */
-  constructor(private userService: UserService) {}
+  //constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.autoLogin();
+    //this.userService.autoLogin();
   }
 
 

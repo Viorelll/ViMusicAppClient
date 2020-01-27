@@ -15,17 +15,18 @@ import { PlaylistsComponent } from './library/playlists/playlists.component';
 
 
 const routes: Routes = [
-  {
-    path: 'login', component: LoginComponent, canActivate: [LoginActivateGuard]
-  },
-  {
-    path: 'login-callback', component: LoginCallbackComponent
-  },
+  // {
+  //   path: 'login', component: LoginComponent, canActivate: [LoginActivateGuard]
+  // },
+  // {
+  //   path: 'login-callback', component: LoginCallbackComponent
+  // },
   {
     path: 'home', component: HomeComponent
   },
   {
-    path: 'library', component: LibraryComponent, canActivate: [AuthorizationGuard], children: 
+    path: 'library', component: LibraryComponent, //canActivate: [AuthorizationGuard], 
+    children: 
     [
       {  path: '', redirectTo: 'playlists', pathMatch: 'full'},  
       {  path: 'playlists', component: PlaylistsComponent},  

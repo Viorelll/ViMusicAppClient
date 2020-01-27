@@ -47,7 +47,7 @@ import { PlaylistsComponent } from './library/playlists/playlists.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    AuthenticationModule,
+    //AuthenticationModule,
     HttpClientModule
   ],
   providers:
