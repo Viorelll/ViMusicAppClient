@@ -1,1 +1,13 @@
-<p>playlist-list works!</p>
+
+<p>Some logic</p>
+<div class="row">
+    <div class="col-xs-12">  
+        <app-recipe-item *ngFor="let playlistElement of playlists; let i = index" 
+                          [recipe]="playlistElement"
+                          [index]="i">
+        </app-recipe-item>
+    </div>
+</div>
+
+
+

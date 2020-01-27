@@ -1,6 +1,6 @@
 import { Song } from './song.model';
 
-export class Library {
+export class Playlist {
     public name: string;
     public description: string;
     public imagePath: string;

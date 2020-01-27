@@ -8,8 +8,8 @@
     <div class="row">			
         <div class="col-md-2">
             <div class="navbar-nav">
-                <a href="/home" class="nav-item nav-link" [routerLinkActive]="['active']">Home</a>
-                <a href="/library" class="nav-item nav-link" [routerLinkActive]="['active']">Library</a>
+                <a [routerLink]="['home']" routerLinkActive="active"  class="nav-item nav-link">Home</a>
+                <a [routerLink]="['library']" routerLinkActive="active" class="nav-item nav-link">Library</a>
             </div>
         </div>					
         <div class="col-md-8">	
