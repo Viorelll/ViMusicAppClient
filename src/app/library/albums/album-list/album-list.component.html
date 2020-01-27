@@ -1,1 +1,12 @@
-<p>album-list works!</p>
+<h5>My albums</h5>
+<div class="container-fluid">
+    <div class="row">
+        <app-album-item *ngFor="let albumElement of userAlbums; let i = index" 
+                            [album]="albumElement"
+                            [index]="i">
+        </app-album-item>
+    </div>
+</div>
+
+
+

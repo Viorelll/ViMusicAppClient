@@ -1,7 +1,7 @@
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+<div class="card mr-3" style="width: 12rem;">
+    <img class="card-img-top"  [src] = "playlist.imagePath" [alt]="playlist.name">
     <div class="card-body">
-      <h5 class="card-title">Playlist title</h5>
-      <p class="card-text">Paylist some details.</p>
+      <h6 class="card-title">{{ playlist.name }}</h6>
+      <p class="card-text small"> {{ playlist.description }}</p>
     </div>
-  </div>
+</div>

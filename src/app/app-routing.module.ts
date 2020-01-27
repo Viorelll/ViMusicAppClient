@@ -28,9 +28,16 @@ const routes: Routes = [
     path: 'library', component: LibraryComponent, //canActivate: [AuthorizationGuard], 
     children: 
     [
-      {  path: '', redirectTo: 'playlists', pathMatch: 'full'},  
-      {  path: 'playlists', component: PlaylistsComponent},  
-      {  path: 'albums', component: AlbumsComponent}    
+      { path: '', redirectTo: 'albums', pathMatch: 'full'},  
+      { path: 'playlists', component: PlaylistsComponent},  
+      { path: 'albums', component: AlbumsComponent, 
+          children: 
+          [
+             { path: '', component: AlbumsComponent}, 
+             { path: ':id', component: AlbumDetailComponent},//, resolve: [AlbumResolverService]},
+             { path: 'vio', component: AlbumDetailComponent} 
+          ]
+      } 
     ]
   }
 ];

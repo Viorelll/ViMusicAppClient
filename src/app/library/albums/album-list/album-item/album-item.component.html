@@ -1,0 +1,9 @@
+<a [routerLink]="[index]" style="cursor:pointer" class="deco-none">
+    <div class="card mr-3" style="width: 12rem;">
+        <img class="card-img-top"  [src] = "album.imagePath" [alt]="album.name">
+        <div class="card-body">
+          <h6 class="card-title">{{ album.name }}</h6>
+          <p class="card-text small"> {{ album.description }}</p>
+        </div>
+    </div>
+</a>

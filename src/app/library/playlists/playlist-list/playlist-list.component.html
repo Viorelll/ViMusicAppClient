@@ -1,13 +1,10 @@
 
-<p>Some logic</p>
-<div class="row">
-    <div class="col-xs-12">  
-        <app-recipe-item *ngFor="let playlistElement of playlists; let i = index" 
-                          [recipe]="playlistElement"
-                          [index]="i">
-        </app-recipe-item>
+<h5>My playlists</h5>
+<div class="container-fluid">
+    <div class="row">
+        <app-playlist-item *ngFor="let playlistElement of playlists; let i = index" 
+                            [playlist]="playlistElement"
+                            [index]="i">
+        </app-playlist-item>
     </div>
 </div>
-
-
-

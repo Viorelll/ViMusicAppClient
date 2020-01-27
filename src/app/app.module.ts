@@ -21,6 +21,8 @@ import { AlbumListComponent } from './library/albums/album-list/album-list.compo
 import { AlbumStartComponent } from './library/albums/album-start/album-start.component';
 import { PlaylistsComponent } from './library/playlists/playlists.component';
 import { PlaylistItemComponent } from './library/playlists/playlist-list/playlist-item/playlist-item.component';
+import { AlbumItemComponent } from './library/albums/album-list/album-item/album-item.component';
+import { HomeAlbumListComponent } from './home/home-album-list/home-album-list.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { PlaylistItemComponent } from './library/playlists/playlist-list/playlis
     PlaylistListComponent,
     PlaylistStartComponent,
     HomeComponent,
-    PlaylistItemComponent
+    PlaylistItemComponent,
+    AlbumItemComponent,
+    HomeAlbumListComponent
   ],
   imports: [
     BrowserModule,

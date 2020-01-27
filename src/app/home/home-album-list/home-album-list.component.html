@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       
+            <h5>Top</h5>
+            <div class="container-fluid">
+                <div class="row">
+                    <app-album-item *ngFor="let albumElement of homeAlbums; let i = index" 
+                                        [album]="albumElement"
+                                        [index]="i">
+                    </app-album-item>
+                </div>
+            </div>
+
+            <hr/>
+
+            <h5>Pop</h5>
+            <div class="container-fluid">
+                <div class="row">
+                    <app-album-item *ngFor="let albumElement of homeAlbums; let i = index" 
+                                        [album]="albumElement"
+                                        [index]="i">
+                    </app-album-item>
+                </div>
+            </div>
+
+            <hr/>
+
+            <h5>Party</h5>
+            <div class="container-fluid">
+                <div class="row">
+                    <app-album-item *ngFor="let albumElement of homeAlbums; let i = index" 
+                                        [album]="albumElement"
+                                        [index]="i">
+                    </app-album-item>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

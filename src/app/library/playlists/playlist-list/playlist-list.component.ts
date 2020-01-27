@@ -19,7 +19,7 @@ export class PlaylistListComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.playlistServiceSubscription = this.playlistService.playlisthanged.subscribe((playlists: Playlist[]) => {
+    this.playlistServiceSubscription = this.playlistService.playlistChanged.subscribe((playlists: Playlist[]) => {
       this.playlists = playlists;
     });
 
