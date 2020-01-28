@@ -1,0 +1,9 @@
+.circle {
+    width: 75px;
+    height: 75px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%; /* may require vendor prefixes */
+    background: #333;
+  }

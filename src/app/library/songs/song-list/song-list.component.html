@@ -1,0 +1,7 @@
+<ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let songElement of songs; let i = index">
+
+        <app-song-item  [song]="songElement" [index]="i"></app-song-item>
+        
+    </li>   
+</ul>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked, AfterViewInit } from '@angular/core';
 import { Album } from 'src/app/shared/album.model';
 import { AlbumService } from '../album.service';
 import { ActivatedRoute, Router, Params } from '@angular/router';
@@ -8,7 +8,8 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
   templateUrl: './album-detail.component.html',
   styleUrls: ['./album-detail.component.css']
 })
-export class AlbumDetailComponent implements OnInit {
+export class AlbumDetailComponent implements OnInit  {
+  
   album: Album;
   id: number;
   
@@ -22,4 +23,5 @@ export class AlbumDetailComponent implements OnInit {
       this.album = this.albumService.getAlbum(this.id);
     });
   }
+  
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AlbumService } from './albums/album.service';
+
 
 @Component({
   selector: 'app-library',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LibraryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private albumService: AlbumService) { }
 
   ngOnInit() {
   }
+
 
 }

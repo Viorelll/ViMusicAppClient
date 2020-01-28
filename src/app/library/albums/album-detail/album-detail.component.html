@@ -1,1 +1,17 @@
-<p>album-detail works!</p>
+
+<br>
+<div class="container py-2">
+  <div class="jumbotron text-white jumbotron-image shadow" 
+  [ngStyle]="{ 'background-image': 'url(' + album.imagePath + ')'}">
+    <h2 class="mb-4">
+      {{album.name}}
+    </h2>
+    <p class="mb-4">
+      {{album.description}}
+    </p>
+    <div class="circle"><h5>{{album.songs.length}}</h5>Tracks</div>
+  </div>
+</div>
+
+<app-song-list [songs]="album.songs"></app-song-list>
+
