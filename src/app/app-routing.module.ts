@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { PlaylistsComponent } from './library/playlists/playlists.component';
 import { AlbumListComponent } from './library/albums/album-list/album-list.component';
 import { HomeAlbumListComponent } from './home/home-album-list/home-album-list.component';
+import { SongDetailComponent } from './library/songs/song-detail/song-detail.component';
 
 
 const routes: Routes = [
@@ -40,7 +41,10 @@ const routes: Routes = [
           children: 
           [
               { path: '', component: AlbumListComponent}, 
-             { path: ':id', component: AlbumDetailComponent},//, resolve: [AlbumResolverService]},
+              { path: ':id', component: AlbumDetailComponent, children: 
+                [
+                  { path: ':id', component: SongDetailComponent}
+                ]}
           ]
       } 
     ]

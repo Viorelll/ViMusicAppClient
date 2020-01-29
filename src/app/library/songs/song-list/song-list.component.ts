@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Song } from 'src/app/shared/song.model';
 import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -12,7 +12,8 @@ import { AlbumService } from '../../albums/album.service';
 })
 export class SongListComponent implements OnInit {
 
-  @Input() songs: Song[];
+  @Input() inputSongs: Song[];
+  @Output() songIndex: number = 1;
 
   constructor(private albumService: AlbumService) { }
 

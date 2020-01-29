@@ -23,6 +23,8 @@ import { AlbumItemComponent } from './library/albums/album-list/album-item/album
 import { HomeAlbumListComponent } from './home/home-album-list/home-album-list.component';
 import { SongItemComponent } from './library/songs/song-list/song-item/song-item.component';
 import { SongListComponent } from './library/songs/song-list/song-list.component';
+import { SongDetailComponent } from './library/songs/song-detail/song-detail.component';
+import { SongsComponent } from './library/songs/songs.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { SongListComponent } from './library/songs/song-list/song-list.component
     AlbumItemComponent,
     HomeAlbumListComponent,
     SongListComponent,
-    SongItemComponent
+    SongItemComponent,
+    SongDetailComponent,
+    SongsComponent
   ],
   imports: [
     BrowserModule,

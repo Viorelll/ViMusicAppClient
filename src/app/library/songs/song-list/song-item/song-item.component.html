@@ -1,7 +1,12 @@
 
-<img [src]="song.imagePath" height="30" width="30" [alt]="song.name" class="rounded-0"> 
-&nbsp;&nbsp;{{ index + 1 }}&nbsp; Author - {{song.name}}
-<div class="float-right" >
-    <img src="assets/logos/logo_small.png" width="20" height="20">
-    <small>&nbsp;&nbsp;2.7M</small>
-</div>
+<a [routerLink]="[index]" style="cursor:pointer" class="deco-none" routerLinkActive="active">
+    <div class="container">
+        <img [src]="song.imagePath" height="30" width="30" [alt]="song.name" class="rounded-0"> 
+        &nbsp;&nbsp;{{ index + 1 }}&nbsp; Author - {{song.name}}
+        <div class="float-right" >
+            <img src="assets/logos/logo_small.png" width="20" height="20">
+            <small>&nbsp;&nbsp;2.7M</small>
+        </div>
+    </div>
+</a>
+
