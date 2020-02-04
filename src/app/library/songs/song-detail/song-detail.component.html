@@ -1,4 +1,4 @@
-  <nav class="navbar fixed-bottom navbar-light bg-light border-top" style="height: 70px;">
+  <!-- <nav class="navbar fixed-bottom navbar-light bg-light border-top" style="height: 70px;">
 
     <div class="d-flex justify-content-start"></div>
     <div class="d-flex justify-content-end">
@@ -27,4 +27,122 @@
       </span>
     </div>
     <div class="d-flex justify-content-around"></div>
+  </nav> -->
+
+
+
+
+ 		
+<nav class="navbar fixed-bottom navbar-light bg-light border-top" style="height: 70px;">
+
+  <div class="d-flex justify-content-start"></div>
+  
+
+
+    <div class="d-flex justify-content-end">
+	
+	     <div id="jquery_jplayer_1" ></div>		 
+        <div id="jp_container_1" class="jp-audio">
+          <div id="jp_interface_1" >
+                <ul class="jp-controls mt-3">
+                  <a href="#" class="jp-previous mr-4 deco-none"><i class='fas fa-step-backward'></i></a>                        
+                  <a href="#" class="jp-play mr-4 deco-none"><i class='fas fas fa-play'></i></a>
+                  <a href="#" class="jp-pause mr-4 deco-none"><i class='fas fa-pause'></i></a>
+                  <a href="#" class="jp-next mr-4 deco-none"><i class='fas fa-step-forward'></i></a>                       
+                  <a href="#" class="jp-shuffle deco-none"><i class='fas fa-random mr-4'></i></a>                     
+                  <a href="#" class="jp-repeat deco-none"><i class='fas fa-redo'></i></a>
+                </ul>
+              </div>	 
+		 </div> 
+  </div>
+  
+
+  <div class="d-flex justify-content-center w-50">
+    
+    <div class="d-block w-100"> 
+      
+              <div id="jp_container_1" class="jp-audio">
+
+                  
+                  <div id="jp_interface_1" >			
+
+                    <div class="progress" style="height: 3px;">
+                      <div class="jp-seek-bar" > 
+                        <div class="jp-play-bar"></div>
+                      </div>
+                    </div>			
+                            
+                    <div class="jp-current-time"></div>   
+                    <div class="jp-duration"></div>
+                  </div>
+
+              </div>
+
+          </div>
+    </div> 
+  
+
+
+    <div class="d-flex justify-content-between">
+	 
+        <div id="jp_container_1" class="jp-audio">
+          <div id="jp_interface_1">
+              <a href="#" class="jp-mute deco-none"><i class='fas fa-volume-down mr-4 mt-3'></i></a>
+              <a href="#" class="jp-unmute deco-none"><i class='fas fa-volume-mute mr-4 mt-3'></i></a>				
+          </div>
+        </div>
+      
+        <img [src]="song.imagePath" alt="song.name" width="50px" height="50px" class="rounded-circle">  
+        <span class="ml-2">
+          Author
+          <br>
+          {{song.name}}
+        </span>
+        
+      </div>
+
+    <div class="d-flex justify-content-around"></div>
   </nav>
+
+
+
+
+
+<!-- 
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+    
+        new jPlayerPlaylist({
+          jPlayer: "#jquery_jplayer_1",
+          cssSelectorAncestor: "#jp_container_1"
+        }, [
+          {
+            title:"Cro Magnon Man",
+            mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
+            oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
+          },
+          {
+            title:"Your Face",
+            mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+            oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+          },
+          {
+            title:"Cyber Sonnet",
+            mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+            oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+          }
+        ], {
+          swfPath: "../../../../../node_modules/jplayer/dist/jplayer",
+          supplied: "oga, mp3",
+          wmode: "window",
+          useStateClassSkin: true,
+          autoBlur: false,
+          smoothPlayBar: true,
+          keyEnabled: true
+        });
+
+    });
+
+  </script> -->

@@ -27,7 +27,11 @@
               "../node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jplayer/dist/jplayer/jquery.jplayer.js",
+              "node_modules/jplayer/dist/add-on/jplayer.playlist.js"
+            ]
           },
           "configurations": {
             "production": {
