@@ -1,5 +1,11 @@
 <ul class="list-group list-group-flush">
     <li class="list-group-item" *ngFor="let songElement of inputSongs; let i = index">     
         <app-song-item [song]="songElement" [index]="i"></app-song-item>       
-    </li>   
+    </li>
+    <div id="jquery_jplayer_1" ></div>		 
+    <div id="jp_container_1" class="jp-audio">
+        <div id="jp_interface_1" >
+        </div>	 
+    </div>    
 </ul>
+
