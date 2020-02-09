@@ -2,7 +2,9 @@ import { Component, OnInit, Output, Input } from '@angular/core';
 import { Song } from 'src/app/shared/song.model';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { SongService } from '../song.service';
-declare var jQuery: any;
+
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-song-detail',
@@ -15,6 +17,7 @@ declare var jQuery: any;
 export class SongDetailComponent implements OnInit {
   song: Song;
   id: number;
+  
 
   constructor(private songService: SongService, 
               private route: ActivatedRoute
@@ -23,7 +26,9 @@ export class SongDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
-      this.song = this.songService.getSong(this.id);
+      this.song = this.songService.getSong(this.id); 
+
+      console.debug($.jPlayer);
     });
 
     
