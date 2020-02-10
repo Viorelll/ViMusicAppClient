@@ -1,10 +1,7 @@
-import { Component, OnInit, Output, Input } from '@angular/core';
+import { Component, OnInit, Output, Input, AfterViewInit } from '@angular/core';
 import { Song } from 'src/app/shared/song.model';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { SongService } from '../song.service';
-
-import * as $ from 'jquery';
-
 
 @Component({
   selector: 'app-song-detail',
@@ -14,10 +11,13 @@ import * as $ from 'jquery';
     './jplayer.vimusicapp.css'
   ]
 })
-export class SongDetailComponent implements OnInit {
+export class SongDetailComponent implements OnInit, AfterViewInit {
+  ngAfterViewInit(): void {
+    this.songService.getJPlayerList();
+  }
+ 
   song: Song;
-  id: number;
-  
+  id: number; 
 
   constructor(private songService: SongService, 
               private route: ActivatedRoute
@@ -27,11 +27,13 @@ export class SongDetailComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
       this.song = this.songService.getSong(this.id); 
-
-      console.debug($.jPlayer);
     });
 
-    
+   
+
+  
+;
   }
+
 
 }

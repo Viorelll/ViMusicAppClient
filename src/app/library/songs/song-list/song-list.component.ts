@@ -4,8 +4,7 @@ import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Album } from 'src/app/shared/album.model';
 import { AlbumService } from '../../albums/album.service';
-
-declare var jPlayerPlaylist: any;
+import { SongService } from '../song.service';
 
 @Component({
   selector: 'app-song-list',
@@ -17,35 +16,15 @@ export class SongListComponent implements OnInit {
   @Input() inputSongs: Song[];
   @Output() songIndex: number = 1;
 
-  constructor(private albumService: AlbumService) { }
+  constructor(private albumService: AlbumService, private songService: SongService) { }
 
   ngOnInit() {
     
-    var myPlaylist = this.initJPlayer();
-
+    var myPlaylist = this.songService.getJPlayerList();
+    
     var myPlaylistSongs : any[] = [];
     this.inputSongs.forEach(x => myPlaylistSongs.push({mp3: x.songPath}));
-
-     console.log(myPlaylistSongs);
-    
     myPlaylist.playlist = myPlaylistSongs;
-  }
-
-  initJPlayer() : any {
-
-          var cssSelector = { jPlayer: "#jquery_jplayer_1", cssSelectorAncestor: "#jp_container_1" };
-          var playlist = []; // Empty playlist
-          var options = {
-            playlistOptions: {
-              autoPlay: true,
-              enableRemoveControls: true
-          }, 
-          swfPath: "../../../../../node_modules/jplayer/dist/jplayer", supplied: "ogv, m4v, oga, mp3, m4a" 
-        };
-        
-          var myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options);
-          
-          return myPlaylist;
   }
 
 }
