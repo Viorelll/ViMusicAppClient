@@ -5,11 +5,14 @@ import { Album } from 'src/app/shared/album.model';
 import { AlbumService } from '../albums/album.service';
 
 declare var jPlayerPlaylist: any;
+declare var jPlayer: any;
+import * as $ from 'jquery';
 
 @Injectable({providedIn: 'root'})
 export class SongService {
 
   myPlaylist: any;
+  myPlayer: any;
 
   constructor(private albumService: AlbumService) {}
 
@@ -19,6 +22,19 @@ export class SongService {
       return album.songs[id];
   }
 
+  getJPlayer() {
+
+    if (this.myPlayer) {
+      console.log('Player was already inited!');
+      return this.myPlayer;
+    }
+
+    this.myPlayer = this.initJPlayer();
+    console.log('Init first instance of player!');
+
+    return this.myPlayer;
+  }
+
   getJPlayerList() {
 
     if (this.myPlaylist) {
@@ -26,14 +42,20 @@ export class SongService {
       return this.myPlaylist;
     }
 
-    this.myPlaylist = this.initJPlayer();
+    this.myPlaylist = this.initJPlayerList();
     console.log('Init first playlist!');
 
     return this.myPlaylist;
   }
- 
 
   initJPlayer(): any {
+   
+    var myPlayer = $("#jquery_jplayer_1");
+    return myPlayer;
+  }
+ 
+
+  initJPlayerList(): any {
     var cssSelector = { jPlayer: "#jquery_jplayer_1", cssSelectorAncestor: "#jp_container_1" };
     var playlist = []; // Empty playlist
     var options = {

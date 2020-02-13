@@ -21,7 +21,7 @@ export class SongItemComponent implements OnInit {
   onPlay(index: number) {
     console.log("id " +  index);
 
-    this.myPlaylist.play( index); // Plays the currently selected item
+    this.myPlaylist.play(index); // Plays the currently selected item
   }
 
 }
